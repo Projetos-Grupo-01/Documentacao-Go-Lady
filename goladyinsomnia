@@ -1,0 +1,307 @@
+type: collection.insomnia.rest/5.0
+name: GoLady
+meta:
+  id: wrk_fba63335f380427e92ecff41a6eaef7f
+  created: 1748619116164
+  modified: 1748619116164
+collection:
+  - name: Usuário
+    meta:
+      id: fld_ac8e247ead504a948a118ca7c663a9bf
+      created: 1748619140044
+      modified: 1748619140044
+      sortKey: -1748619140044
+    children:
+      - url: http://localhost:8080/usuarios/all
+        name: Listar Todos
+        meta:
+          id: req_97809faa472c4ece9c4199e55de98eff
+          created: 1748619226159
+          modified: 1748624464667
+          isPrivate: false
+          sortKey: -1748619226159
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Cadastrar
+        meta:
+          id: req_e637d8758a014cd4834e250f6cf1a909
+          created: 1748619494349
+          modified: 1748624926655
+          isPrivate: false
+          sortKey: -1748619494349
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "nome" : "Maria",
+            "usuario" : "maria@gmail.com",
+            "senha" : "12345678",
+            "foto" : "-",
+            "avaliacao" : 5,
+            "telefone" : "011 96857-4123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: Listar por ID
+        meta:
+          id: req_c9f55df9191b4f8abb8bdd80d59ea23e
+          created: 1748624489336
+          modified: 1748624607245
+          isPrivate: false
+          sortKey: -1748624489336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/usuario/maria@gmail.com
+        name: Buscar Usuário
+        meta:
+          id: req_de0b38184cd643e2be2b77fca5db4975
+          created: 1748624612324
+          modified: 1748624924221
+          isPrivate: false
+          sortKey: -1748624612324
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: Atualizar
+        meta:
+          id: req_f66a9ba3bf9d487fb87427f30bf13232
+          created: 1748624773193
+          modified: 1748625726702
+          isPrivate: false
+          sortKey: -1748624773193
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "id" : 1,
+            "nome" : "Maria",
+            "usuario" : "maria@gmail.com",
+            "senha" : "12345678",
+            "foto" : "-",
+            "avaliacao" : 5,
+            "telefone" : "011 96857-4123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Viagem
+    meta:
+      id: fld_5ab9b069a6134cd999808805f12438d4
+      created: 1748630494068
+      modified: 1748630494068
+      sortKey: -1748421405274.5
+    children:
+      - url: http://localhost:8080/usuarios/all
+        name: Listar Todos
+        meta:
+          id: req_adab313c33b34c399ff8976833bc52e7
+          created: 1748630494078
+          modified: 1748630494078
+          isPrivate: false
+          sortKey: -1748619226159
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Cadastrar
+        meta:
+          id: req_b509172f2ed14bd9918804893bd682ec
+          created: 1748630494090
+          modified: 1748630494090
+          isPrivate: false
+          sortKey: -1748619494349
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "nome" : "Maria",
+            "usuario" : "maria@gmail.com",
+            "senha" : "12345678",
+            "foto" : "-",
+            "avaliacao" : 5,
+            "telefone" : "011 96857-4123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: Listar por ID
+        meta:
+          id: req_3736948d7a21444ca51f5eeaafafa4ea
+          created: 1748630494095
+          modified: 1748630494095
+          isPrivate: false
+          sortKey: -1748624489336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/usuario/maria@gmail.com
+        name: Buscar Usuário
+        meta:
+          id: req_587f043545034195bb21540ccb689d0c
+          created: 1748630494101
+          modified: 1748630494101
+          isPrivate: false
+          sortKey: -1748624612324
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: Atualizar
+        meta:
+          id: req_8e80cb99ec93447c90e603b05f771c32
+          created: 1748630494105
+          modified: 1748630494105
+          isPrivate: false
+          sortKey: -1748624773193
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "id" : 1,
+            "nome" : "Maria",
+            "usuario" : "maria@gmail.com",
+            "senha" : "12345678",
+            "foto" : "-",
+            "avaliacao" : 5,
+            "telefone" : "011 96857-4123"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - name: Delete
+        meta:
+          id: req_893514bbf3aa44bf9167ddca18b3b97a
+          created: 1748630509143
+          modified: 1748630521936
+          isPrivate: false
+          sortKey: -1748630509143
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_669a71ad97294e73da3a8271979f7ba703c3bebd
+    created: 1748619116183
+    modified: 1748619116183
+environments:
+  name: Base Environment
+  meta:
+    id: env_669a71ad97294e73da3a8271979f7ba703c3bebd
+    created: 1748619116174
+    modified: 1748619116174
+    isPrivate: false
