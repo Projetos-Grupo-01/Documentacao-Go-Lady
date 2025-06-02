@@ -1,13 +1,13 @@
 type: collection.insomnia.rest/5.0
 name: GoLady
 meta:
-  id: wrk_fba63335f380427e92ecff41a6eaef7f
-  created: 1748619116164
-  modified: 1748619116164
+  id: wrk_862f692f25ab4e068cb5d287e266e148
+  created: 1748878579927
+  modified: 1748878579927
 collection:
   - name: Usuário
     meta:
-      id: fld_ac8e247ead504a948a118ca7c663a9bf
+      id: fld_870a45fb78ae4148ac8cc1a73269abce
       created: 1748619140044
       modified: 1748619140044
       sortKey: -1748619140044
@@ -15,9 +15,9 @@ collection:
       - url: http://localhost:8080/usuarios/all
         name: Listar Todos
         meta:
-          id: req_97809faa472c4ece9c4199e55de98eff
+          id: req_89f1175705904ee986b1ae038b0bfe53
           created: 1748619226159
-          modified: 1748624464667
+          modified: 1748878904508
           isPrivate: false
           sortKey: -1748619226159
         method: GET
@@ -35,7 +35,7 @@ collection:
       - url: http://localhost:8080/usuarios/cadastrar
         name: Cadastrar
         meta:
-          id: req_e637d8758a014cd4834e250f6cf1a909
+          id: req_b665b4c0d3284a4990fc6d27a5589461
           created: 1748619494349
           modified: 1748624926655
           isPrivate: false
@@ -68,7 +68,7 @@ collection:
       - url: http://localhost:8080/usuarios/1
         name: Listar por ID
         meta:
-          id: req_c9f55df9191b4f8abb8bdd80d59ea23e
+          id: req_5e57ff68a49844458bc07b3a1fcce152
           created: 1748624489336
           modified: 1748624607245
           isPrivate: false
@@ -88,9 +88,9 @@ collection:
       - url: http://localhost:8080/usuarios/usuario/maria@gmail.com
         name: Buscar Usuário
         meta:
-          id: req_de0b38184cd643e2be2b77fca5db4975
+          id: req_e26142e9eed34b14ae41af6835011922
           created: 1748624612324
-          modified: 1748624924221
+          modified: 1748878902899
           isPrivate: false
           sortKey: -1748624612324
         method: GET
@@ -108,7 +108,7 @@ collection:
       - url: http://localhost:8080/usuarios/atualizar
         name: Atualizar
         meta:
-          id: req_f66a9ba3bf9d487fb87427f30bf13232
+          id: req_21ff03a4973346ae82f329d09d1c742f
           created: 1748624773193
           modified: 1748625726702
           isPrivate: false
@@ -141,17 +141,17 @@ collection:
           rebuildPath: true
   - name: Viagem
     meta:
-      id: fld_5ab9b069a6134cd999808805f12438d4
+      id: fld_1c4a27ac772f4dbd97837f9990e7b757
       created: 1748630494068
       modified: 1748630494068
       sortKey: -1748421405274.5
     children:
-      - url: http://localhost:8080/usuarios/all
+      - url: http://localhost:8080/viagens
         name: Listar Todos
         meta:
-          id: req_adab313c33b34c399ff8976833bc52e7
+          id: req_95fe7b0d4dfc457e87ce8f02c9e59472
           created: 1748630494078
-          modified: 1748630494078
+          modified: 1748879038747
           isPrivate: false
           sortKey: -1748619226159
         method: GET
@@ -166,12 +166,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/usuarios/cadastrar
+      - url: http://localhost:8080/viagens
         name: Cadastrar
         meta:
-          id: req_b509172f2ed14bd9918804893bd682ec
+          id: req_c2f125c830fe49d2af005d6b27f5f756
           created: 1748630494090
-          modified: 1748630494090
+          modified: 1748880674644
           isPrivate: false
           sortKey: -1748619494349
         method: POST
@@ -179,12 +179,13 @@ collection:
           mimeType: application/json
           text: |-
             {
-            "nome" : "Maria",
-            "usuario" : "maria@gmail.com",
-            "senha" : "12345678",
-            "foto" : "-",
-            "avaliacao" : 5,
-            "telefone" : "011 96857-4123"
+            	"distancia" : 90,
+            	"usuario": {
+            		"id": 1
+            	},
+            	"veiculo": {
+            		"id": 2
+            	}
             }
         headers:
           - name: Content-Type
@@ -199,12 +200,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/usuarios/1
+      - url: http://localhost:8080/viagens/3
         name: Listar por ID
         meta:
-          id: req_3736948d7a21444ca51f5eeaafafa4ea
+          id: req_4bcc22ba10c742e7940c938d9e562b42
           created: 1748630494095
-          modified: 1748630494095
+          modified: 1748879233568
           isPrivate: false
           sortKey: -1748624489336
         method: GET
@@ -219,12 +220,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/usuarios/usuario/maria@gmail.com
-        name: Buscar Usuário
+      - url: http://localhost:8080/viagens/usuario/maria
+        name: Buscar por Usuário
         meta:
-          id: req_587f043545034195bb21540ccb689d0c
+          id: req_3a2706377917443ab4925363dd05f71b
           created: 1748630494101
-          modified: 1748630494101
+          modified: 1748879000120
           isPrivate: false
           sortKey: -1748624612324
         method: GET
@@ -239,12 +240,12 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - url: http://localhost:8080/usuarios/atualizar
+      - url: http://localhost:8080/viagens
         name: Atualizar
         meta:
-          id: req_8e80cb99ec93447c90e603b05f771c32
+          id: req_50398a4100944fdc803843fd7758d188
           created: 1748630494105
-          modified: 1748630494105
+          modified: 1748879183307
           isPrivate: false
           sortKey: -1748624773193
         method: PUT
@@ -252,13 +253,14 @@ collection:
           mimeType: application/json
           text: |-
             {
-            "id" : 1,
-            "nome" : "Maria",
-            "usuario" : "maria@gmail.com",
-            "senha" : "12345678",
-            "foto" : "-",
-            "avaliacao" : 5,
-            "telefone" : "011 96857-4123"
+            	"id" : 3,
+            	"distancia" : 40,
+            	"usuario": {
+            		"id": 1
+            	},
+            	"veiculo": {
+            		"id": 1
+            	}
             }
         headers:
           - name: Content-Type
@@ -273,11 +275,163 @@ collection:
             send: true
             store: true
           rebuildPath: true
-      - name: Delete
+      - url: http://localhost:8080/viagens/1
+        name: Delete
         meta:
-          id: req_893514bbf3aa44bf9167ddca18b3b97a
+          id: req_27f8012be4114fb8bcc5abdbddde58a8
           created: 1748630509143
-          modified: 1748630521936
+          modified: 1748879031490
+          isPrivate: false
+          sortKey: -1748630509143
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Veiculo
+    meta:
+      id: fld_a00d6c8150514f938263073c93517dfa
+      created: 1748878668473
+      modified: 1748878668473
+      sortKey: -1748392942702.75
+    children:
+      - url: http://localhost:8080/veiculos
+        name: Listar Todos
+        meta:
+          id: req_92bb9b07344240039c70a7c2a2cd2b6a
+          created: 1748878668474
+          modified: 1748879109256
+          isPrivate: false
+          sortKey: -1748619226159
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/veiculos
+        name: Cadastrar
+        meta:
+          id: req_6ef152ca4366456d994003e9f023c9cd
+          created: 1748878668475
+          modified: 1748879404281
+          isPrivate: false
+          sortKey: -1748619494349
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            "categoria" : "Confort",
+            "modelo" : "Sandero",
+            "placa" : "123adsd",
+            "velocidadeMedia" : 40
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/veiculos/2
+        name: Listar por ID
+        meta:
+          id: req_d30b686400684d538f4e4239cde6d431
+          created: 1748878668476
+          modified: 1748879422159
+          isPrivate: false
+          sortKey: -1748624489336
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/veiculos/categoria/confor
+        name: Buscar por Categoria
+        meta:
+          id: req_f4e23e91d7974168b0fe3c8bb2df7315
+          created: 1748878668477
+          modified: 1748879475020
+          isPrivate: false
+          sortKey: -1748624612324
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/veiculos
+        name: Atualizar
+        meta:
+          id: req_f08789ba82b74e2a8b78730712e57119
+          created: 1748878668479
+          modified: 1748879504140
+          isPrivate: false
+          sortKey: -1748624773193
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 2,
+            	"categoria": "Confort",
+            	"modelo": "Sandero",
+            	"placa": "123adsd",
+            	"velocidadeMedia": 100,
+            	"viagem": null
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.2
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/veiculos/2
+        name: Delete
+        meta:
+          id: req_c20b51494e69422181ec1d03e976e15d
+          created: 1748878668480
+          modified: 1748880761235
           isPrivate: false
           sortKey: -1748630509143
         method: DELETE
@@ -295,13 +449,13 @@ collection:
 cookieJar:
   name: Default Jar
   meta:
-    id: jar_669a71ad97294e73da3a8271979f7ba703c3bebd
+    id: jar_bdc88f1b4bd6490396244a2ede483fd0
     created: 1748619116183
     modified: 1748619116183
 environments:
   name: Base Environment
   meta:
-    id: env_669a71ad97294e73da3a8271979f7ba703c3bebd
+    id: env_bc129cf521b04fda9fe616d06de7d32e
     created: 1748619116174
     modified: 1748619116174
     isPrivate: false
