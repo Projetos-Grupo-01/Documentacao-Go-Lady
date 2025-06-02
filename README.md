@@ -34,4 +34,4 @@ A documentação será atualizada continuamente conforme o progresso do desenvol
 
 ---
 
-### GoLady — Você no controle da sua jornada.! 🚗💁‍♀️
+### GoLady — Você no controle da sua jornada! 🚗💁‍♀️
